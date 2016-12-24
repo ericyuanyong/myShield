@@ -169,6 +169,16 @@
 <smd name="8" x="2.35" y="1.5" dx="0.25" dy="0.55" layer="1" rot="R90"/>
 <smd name="9" x="1.175" y="0.75" dx="1" dy="1.7" layer="1" rot="R180"/>
 </package>
+<package name="TMP007_1">
+<smd name="C3" x="0.5" y="-0.5" dx="0.29" dy="0.29" layer="1" roundness="100"/>
+<smd name="B3" x="0.5" y="0" dx="0.29" dy="0.29" layer="1" roundness="100"/>
+<smd name="A3" x="0.5" y="0.5" dx="0.29" dy="0.29" layer="1" roundness="100"/>
+<smd name="A2" x="0" y="0.5" dx="0.29" dy="0.29" layer="1" roundness="100"/>
+<smd name="A1" x="-0.5" y="0.5" dx="0.29" dy="0.29" layer="1" roundness="100"/>
+<smd name="B1" x="-0.5" y="0" dx="0.29" dy="0.29" layer="1" roundness="100"/>
+<smd name="C1" x="-0.5" y="-0.5" dx="0.29" dy="0.29" layer="1" roundness="100"/>
+<smd name="C2" x="0" y="-0.5" dx="0.29" dy="0.29" layer="1" roundness="100"/>
+</package>
 <package name="TMP007">
 <smd name="C3" x="0.5" y="-0.5" dx="0.35" dy="0.35" layer="1" roundness="100"/>
 <smd name="B3" x="0.5" y="0" dx="0.35" dy="0.35" layer="1" roundness="100"/>
@@ -284,7 +294,22 @@
 <gate name="G$1" symbol="TMP007" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="TMP007">
+<device name="PACKAGE_1" package="TMP007">
+<connects>
+<connect gate="G$1" pin="!ALERT!" pad="C2"/>
+<connect gate="G$1" pin="ADR0" pad="C1"/>
+<connect gate="G$1" pin="ADR1" pad="B1"/>
+<connect gate="G$1" pin="AGND" pad="A2"/>
+<connect gate="G$1" pin="DGND" pad="A1"/>
+<connect gate="G$1" pin="SCL" pad="B3"/>
+<connect gate="G$1" pin="SDA" pad="C3"/>
+<connect gate="G$1" pin="VCC" pad="A3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="" package="TMP007_1">
 <connects>
 <connect gate="G$1" pin="!ALERT!" pad="C2"/>
 <connect gate="G$1" pin="ADR0" pad="C1"/>
